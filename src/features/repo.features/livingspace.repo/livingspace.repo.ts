@@ -1,9 +1,7 @@
-import debug from "debug";
 import { currentUrl } from "../../../config.renderorlocal";
 import { LivingSpaceStructure } from "../../../models/livingspace";
 import { ServerResponse } from "../../../models/users";
 import { RepoLivingSpace } from "./livingspace.repo.interface";
-
 export class LivingSpaceRepo implements RepoLivingSpace<ServerResponse> {
   url: string;
   constructor() {

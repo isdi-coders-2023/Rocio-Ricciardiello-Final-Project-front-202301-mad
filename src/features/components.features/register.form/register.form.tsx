@@ -1,5 +1,5 @@
 import { SyntheticEvent, useMemo } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { RegisterStructure } from "../../../models/users";
 import { useUsers } from "../../hooks.features/use.users";
 import { UsersRepo } from "../../repo.features/users.repo/users.repo";
@@ -62,7 +62,6 @@ export default function Register() {
           />{" "}
           Nombre
         </label>
-
         <label className="registerlabel">
           <input
             type="text"
@@ -81,9 +80,11 @@ export default function Register() {
           />{" "}
           Teléfono
         </label>
-        <label className="registerlabel">
-          <input className="enviar" type="submit" value="Register" />
-        </label>
+        <Link to={"/login"} className="linktoregister">
+          <label className="registerlabel">
+            <input className="enviar" type="submit" value="Register" />
+          </label>
+        </Link>
       </form>
     </>
   );
